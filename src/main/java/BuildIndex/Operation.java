@@ -67,7 +67,7 @@ public class Operation {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Please choose what do you want");
-        System.out.println("\tInitialize thr data set --- 0");
+        System.out.println("\tInitialize the data set --- 0");
         System.out.println("\tDelete file from index ---- 1");
         System.out.println("\tSearch keyword from index - 2");
         System.out.println("\tEnd the program ------------3");
@@ -75,12 +75,13 @@ public class Operation {
         double serverResponseTime;
         double clientTime;
 
-        BloomFilter bloom = BloomFilter.readLshFromFile(Global.BloomFilterPath);
+        BloomFilter bloomFilter = BloomFilter.readLshFromFile(Global.BloomFilterPath);
         ArrayList<ArrayList> hashFunctions = MinHash.readLshFromFile(Global.LSHPath);
 
         while (sc.hasNext()) {
             String input = sc.nextLine();
             switch (input) {
+                // Initialize the data set
                 case "0":
                     serverResponseTime = 0;
                     clientTime = 0;
@@ -90,7 +91,7 @@ public class Operation {
                     int i = 0;
                     for (String file : fileList) {
                         System.out.print(++i + "/" + fileList.size());
-                        Pair<ArrayList<LabelAndData>, Double> client = Functions.time(() -> OperationOnClient.addition(file, bloom, hashFunctions, AES.geneKey(file).getEncoded(), true));
+                        Pair<ArrayList<LabelAndData>, Double> client = Functions.time(() -> OperationOnClient.addition(file, bloomFilter, hashFunctions, AES.geneKey(file).getEncoded(), true));
                         clientTime += client.getValue();
 
                         serverResponseTime += Functions.time(() -> OperationOnIndexServer.operate(client.getKey(), "init")).getValue();
@@ -103,9 +104,9 @@ public class Operation {
                     System.out.println("关键字总数：" + Global.keywordSize);
                     System.out.println("不同的关键字总数: " + OperationOnClient.getKeywordSet().size());
 
-                    System.out.println("invertedIndex的大小:" + OperationOnIndexServer.getInvertedIndex().size());
-                    System.out.println("forwardIndex的大小:" + OperationOnIndexServer.getForwardIndex().size());
-                    System.out.println("DictKwd的大小:" + OperationOnClient.getDictKwd().size());
+                    System.out.println("invertedIndex的大小: " + OperationOnIndexServer.getInvertedIndex().size());
+                    System.out.println("forwardIndex的大小: " + OperationOnIndexServer.getForwardIndex().size());
+                    System.out.println("DictKwd的大小: " + OperationOnClient.getDictKwd().size());
 
                     MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
 
@@ -122,12 +123,13 @@ public class Operation {
                     System.out.println("MaxMemory---" + maxMemorySize / (1024 * 1024) + "M");
                     System.out.println("UsedMemory---" + usedMemorySize / (1024 * 1024) + "M");
 
-                    System.out.println("serverResponseTime:" + serverResponseTime);
-                    System.out.println("serverResponseTimeAvg:" + serverResponseTime / fileList.size());
-                    System.out.println("clientTime:" + clientTime);
-                    System.out.println("clientTimeAvg:" + clientTime / fileList.size());
+                    System.out.println("serverResponseTime: " + serverResponseTime);
+                    System.out.println("serverResponseTimeAvg: " + serverResponseTime / fileList.size());
+                    System.out.println("clientTime: " + clientTime);
+                    System.out.println("clientTimeAvg: " + clientTime / fileList.size());
                     break;
 
+                // Delete file from index
                 case "1":
                     serverResponseTime = 0;
                     clientTime = 0;
@@ -143,26 +145,27 @@ public class Operation {
                         serverResponseTime += Functions.time(() -> OperationOnIndexServer.operate(list, "delete")).getValue();
                     }
 
-                    System.out.println("serverResponseTime:" + serverResponseTime);
-                    System.out.println("serverResponseTimeAvg:" + serverResponseTime / fileLists.size());
-                    System.out.println("clientTime:" + clientTime);
-                    System.out.println("clientTimeAvg:" + clientTime / fileLists.size());
+                    System.out.println("serverResponseTime: " + serverResponseTime);
+                    System.out.println("serverResponseTimeAvg: " + serverResponseTime / fileLists.size());
+                    System.out.println("clientTime: " + clientTime);
+                    System.out.println("clientTimeAvg: " + clientTime / fileLists.size());
 
                     serverResponseTime = 0;
                     clientTime = 0;
 
                     for (String path : fileLists) {
-                        Pair<ArrayList<LabelAndData>, Double> client = Functions.time(() -> OperationOnClient.addition(path, bloom, hashFunctions, AES.geneKey(path).getEncoded(), false));
+                        Pair<ArrayList<LabelAndData>, Double> client = Functions.time(() -> OperationOnClient.addition(path, bloomFilter, hashFunctions, AES.geneKey(path).getEncoded(), false));
                         clientTime += client.getValue();
                         serverResponseTime += Functions.time(() -> OperationOnIndexServer.operate(client.getKey(), "add")).getValue();
                     }
 
-                    System.out.println("serverResponseTime:" + serverResponseTime);
-                    System.out.println("serverResponseTimeAvg:" + serverResponseTime / fileLists.size());
-                    System.out.println("clientTime:" + clientTime);
-                    System.out.println("clientTimeAvg:" + clientTime / fileLists.size());
+                    System.out.println("serverResponseTime: " + serverResponseTime);
+                    System.out.println("serverResponseTimeAvg: " + serverResponseTime / fileLists.size());
+                    System.out.println("clientTime: " + clientTime);
+                    System.out.println("clientTimeAvg: " + clientTime / fileLists.size());
                     break;
 
+                // Search keyword from index
                 case "2":
                     clientTime = 0;
                     serverResponseTime = 0;
@@ -178,10 +181,7 @@ public class Operation {
 
                         ArrayList<String> indPathList = new ArrayList<>();
 
-                        BloomFilter bloomFilter = BloomFilter.readLshFromFile(Global.BloomFilterPath);
-                        ArrayList<ArrayList> hashs = MinHash.readLshFromFile(Global.LSHPath);
-
-                        Pair<ArrayList<Token>, Double> pair = Functions.time(() -> OperationOnClient.searchClientToServer(keyword, bloomFilter, hashs, rkey));
+                        Pair<ArrayList<Token>, Double> pair = Functions.time(() -> OperationOnClient.searchClientToServer(keyword, bloomFilter, hashFunctions, rkey));
 
                         clientTime += pair.getValue();
 
@@ -202,14 +202,15 @@ public class Operation {
                         Functions.getPathList(indPathList, Global.resultNum);
                     }
 
-                    System.out.println("查询的数据中被更新的关键字数目:" + Global.updateNum + "---" + "占总数的百分比：" + Global.updateNum * 1.0 / (num * Global.hashOr) * 100.0 + "%");
-                    System.out.println("serverResponseTime:" + serverResponseTime);
-                    System.out.println("serverResponseTimeAvg:" + serverResponseTime / wordList.size());
-                    System.out.println("clientTime:" + clientTime);
-                    System.out.println("clientTimeAvg:" + clientTime / wordList.size());
+                    System.out.println("查询的数据中被更新的关键字数目: " + Global.updateNum + "---" + "占总数的百分比：" + Global.updateNum * 1.0 / (num * Global.hashOr) * 100.0 + "%");
+                    System.out.println("serverResponseTime: " + serverResponseTime);
+                    System.out.println("serverResponseTimeAvg: " + serverResponseTime / wordList.size());
+                    System.out.println("clientTime: " + clientTime);
+                    System.out.println("clientTimeAvg: " + clientTime / wordList.size());
 
                     break;
 
+                // End
                 case "3":
                     Functions.time(() -> setIndex()).getValue();
                     return;

@@ -167,7 +167,6 @@ public class OperationOnIndexServer {
                 while (invertedList.size() < invertedBucketSize) {
                     invertedList.add(invertedFakeValue);
                 }
-                // System.out.println(i++);
             }
             return 1;
         } else if (list != null) {
@@ -184,7 +183,6 @@ public class OperationOnIndexServer {
                         while (invertedList.size() < invertedBucketSize)
                             invertedList.add(invertedFakeValue);
                     }
-                    invertedIndex.put(label, invertedList);
                     j++;
                 }
             }
@@ -217,8 +215,7 @@ public class OperationOnIndexServer {
             } else if (list.size() < invertedBucketSize) {
                 list.add(invertedIndexValue);
                 return;
-            } else if (!isInit) {
-                list.remove(invertedFakeValue);
+            } else if (!isInit && list.remove(invertedFakeValue)) {
                 list.add(invertedIndexValue);
                 return;
             } else {

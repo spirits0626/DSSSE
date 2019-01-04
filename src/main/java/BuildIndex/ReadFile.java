@@ -8,7 +8,6 @@ import Utils.Global;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ReadFile {
 
@@ -52,18 +51,14 @@ public class ReadFile {
      * @throws IOException
      */
     public static ArrayList<String> getHashOfKeyword(String keyword, BloomFilter bloomFilter, ArrayList<ArrayList> hashs) {
-        ArrayList<String> hashList = new ArrayList<>();
-        // 处理每一个单词
+        // 处理每一个单词，bloom编码
         bloomFilter.clear();
         for (int i = 0; i < keyword.length() - 1; i++) {
             bloomFilter.add(keyword.substring(i, i + 2));
         }
 
-        int[][] res = MinHash.getMinHash(hashs, bloomFilter.getBitSet());
-        for (int i = 0; i < res.length; i++) {
-            hashList.add(Arrays.toString(res[i]));
-        }
-        return hashList;
+        // 获取编码之后单词对应的minhash值
+        return MinHash.getMinHash(hashs, bloomFilter.getBitSet());
     }
 
     /**

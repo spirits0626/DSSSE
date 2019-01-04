@@ -161,18 +161,13 @@ public class OperationOnClient {
             } else {
                 // 两次搜索间隙添加了新数据
                 SecretKey newKey = AES.geneKey(null);
-                byte[] cipherOfUkey;
+                byte[] cipherOfKey = AES.encrypt(hash, key);
+                byte[] cipherOfUkey = AES.encrypt(hash, uKey);
                 byte[] cipherOfNewkey = AES.encrypt(hash, newKey.getEncoded());
                 byte[] cipherOfRkey = AES.encrypt(hash, rkey);
-                byte[] cipherOfUkeyAndNkey;
-                byte[] cipherOfNkeyAndRkey = Functions.xor(cipherOfNewkey, cipherOfRkey);
 
-                cipherOfUkey = AES.encrypt(hash, uKey);
-                cipherOfUkeyAndNkey = Functions.xor(cipherOfUkey, cipherOfNewkey);
-
-                byte[] cipherOfKey = AES.encrypt(hash, key);
-                tokenOfCS = new TokenOfCS(cipherOfKey, cipherOfUkey, cipherOfNewkey,
-                        Functions.xor(cipherOfKey, cipherOfNewkey), cipherOfUkeyAndNkey, cipherOfNkeyAndRkey, null);
+                tokenOfCS = new TokenOfCS(cipherOfKey, cipherOfUkey, cipherOfNewkey, Functions.xor(cipherOfKey, cipherOfNewkey),
+                        Functions.xor(cipherOfUkey, cipherOfNewkey), Functions.xor(cipherOfNewkey, cipherOfRkey), null);
 
                 tokens.add(new Token(tokenOfCS, cipherOfRkey));
                 // 更新密钥

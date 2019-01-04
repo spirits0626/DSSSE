@@ -3,7 +3,7 @@ package Utils;
 public class Global {
     public static final String ALGORITHM = "AES";
 
-    public static int resultNum = 5;
+    public static int resultNum = 1000;
 
     /**
      * bloom编码参数设置
