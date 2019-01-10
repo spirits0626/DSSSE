@@ -3,7 +3,7 @@ package Utils;
 public class Global {
     public static final String ALGORITHM = "AES";
 
-    public static int resultNum = 1000;
+    public static int resultNum = 500;
 
     /**
      * bloom编码参数设置
@@ -12,7 +12,7 @@ public class Global {
 
     public static int n = 500;
 
-    public static int k = 15;
+    public static int k = 37;
 
     /**
      * LSH参数设置
@@ -26,7 +26,7 @@ public class Global {
     /**
      * 索引桶大小的设置
      */
-    public static int InvertedBucketSize = 500;
+    public static int InvertedBucketSize = 700;
 
     public static int ForwardBucketSize = 300*hashOr;
 
@@ -40,11 +40,13 @@ public class Global {
     public static String BloomFilterPath = "C:\\study\\Experimental Data\\BloomFilter.txt";
 
     public static String forwardIndexPath = "C:\\study\\Experimental Data\\forwardIndex.txt";
- 
+
     public static String invertedIndexPath = "C:\\study\\Experimental Data\\invertedIndex.txt";
 
     public static String dictKwdPath = "C:\\study\\Experimental Data\\dictKwd.txt";
-     */
+
+    public static String experimentalResult = "C:\\study\\Experimental Data\\experimentalResult.txt";
+ */
 
 
     public static String dataPath = "/home/wj/DSSSE/Experimental Data/test";
@@ -61,6 +63,8 @@ public class Global {
 
     public static String dictKwdPath = "/home/wj/DSSSE/Experimental Data/dictKwd.txt";
 
+    public static String experimentalResult = "/home/wj/DSSSE/Experimental Data/experimentalResult.txt";
+
 
     // 统计inverted index中值的总数
     public static int invertedValueSize = 0;
@@ -72,4 +76,12 @@ public class Global {
 
     // 查询的数据中被更新的关键字
     public static int updateNum = 0;
+
+    public static double serverResponseTime = 0;
+
+    public static double clientTime = 0;
+
+    public static int searchTime = 100;
+
+    public static int searchLoopTime = 20;
 }

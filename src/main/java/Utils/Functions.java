@@ -47,11 +47,13 @@ public class Functions {
 
         System.out.println(list.size());
 
+        /**
         for (int i = list.size() - 1; i >= 0 && resultNum > 0; i--, resultNum--) {
             Map.Entry<String, Integer> mapping = list.get(i);
             indPathList.add(mapping.getKey());
             // System.out.println(mapping.getKey() + ":" + mapping.getValue());
         }
+         */
         return indPathList;
 
     }

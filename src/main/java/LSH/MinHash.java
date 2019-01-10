@@ -56,6 +56,7 @@ public class MinHash {
      */
     public static ArrayList<String> getMinHash(ArrayList<ArrayList> hashs, BitSet data) {
         HashSet<Integer> dataSet = new HashSet();
+        //int[][] result = new int[hashs.size()][];
         ArrayList<String> result = new ArrayList<>();
         for (int i = 0; i < data.size(); i++) {
             if (data.get(i)) {
@@ -65,18 +66,56 @@ public class MinHash {
         //System.out.println("需要hash的数据dataSet" + dataSet.toString());
         for (int j = 0; j < hashs.size(); j++) {
             ArrayList hash = hashs.get(j);
+            //result[j] = new int[hash.size()];
+            int[] res = new int[hash.size()];
+            for (int k = 0; k < hash.size(); k++) {
+                ArrayList lsh = (ArrayList) hash.get(k);
+                for (int i = 0; i < lsh.size(); i++) {
+                    if (dataSet.contains(lsh.get(i))) {
+                        //result[j][k] = i + 1;
+                        res[k] = i + 1;
+                        break;
+                    }
+                }
+            }
+            result.add(Arrays.toString(res));
+        }
+        return result;
+    }
+
+    /**
+     * 计算经过bloom编码的数据的LSH值
+     *
+     * @param hashs
+     * @param data
+     * @return
+     */
+    public static ArrayList<String> getMinHash2(ArrayList<ArrayList> hashs, BitSet data) {
+        HashSet<Integer> dataSet = new HashSet();
+        //int[][] result = new int[hashs.size()][];
+        ArrayList<String> result = new ArrayList<>();
+        for (int i = 0; i < data.size(); i++) {
+            if (data.get(i)) {
+                dataSet.add(i);
+            }
+        }
+        //System.out.println("需要hash的数据dataSet" + dataSet.toString());
+        for (int j = 0; j < hashs.size(); j++) {
+            ArrayList hash = hashs.get(j);
+            //result[j] = new int[hash.size()];
             StringBuilder sb = new StringBuilder();
             for (int k = 0; k < hash.size(); k++) {
                 ArrayList lsh = (ArrayList) hash.get(k);
                 for (int i = 0; i < lsh.size(); i++) {
                     if (dataSet.contains(lsh.get(i))) {
+                        //result[j][k] = i + 1;
                         sb.append(i + 1 + ",");
                         break;
                     }
                 }
-                sb.deleteCharAt(sb.length()-1);
-                result.add(sb.toString());
             }
+            sb.deleteCharAt(sb.length() - 1);
+            result.add(sb.toString());
         }
         return result;
     }
@@ -116,16 +155,16 @@ public class MinHash {
         ArrayList hash = getLSHs(Global.hashLength, Global.hashAnd, Global.hashOr);
         writeLshToFile(Global.LSHPath, hash);
 
+
         /**
          BloomFilter bloomFilter = new BloomFilter(Global.c, Global.n, Global.k);
          bloomFilter.add("john");
          BitSet set = bloomFilter.getBitSet();
 
-         int[][] res = getMinHash(hash, set);
-         for (int i = 0; i < res.length; i++) {
-         System.out.println(Arrays.toString(res[i]));
+         ArrayList<String> res = getMinHash(hash, set);
+         for (int i = 0; i < res.size(); i++) {
+         System.out.println(res.get(i));
          }
-
          */
 
     }

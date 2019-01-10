@@ -20,7 +20,7 @@ public class GenerateTestData {
         ArrayList<String> fileList = ReadFile.readFileList(Global.fileListPath);
         // 将所有文件打乱
         Collections.shuffle(fileList);
-        if(fileList.size() < num)
+        if (fileList.size() < num)
             return fileList;
         else
             return fileList.subList(0, num);
@@ -53,7 +53,9 @@ public class GenerateTestData {
             keywords.addAll(readFile(filePath));
         }
         List<String> result = new ArrayList<>(keywords);
-        Collections.shuffle(result);
+        if (result.size() <= num)
+            return result;
+        // Collections.shuffle(result);
         return result.subList(0, num);
     }
 
