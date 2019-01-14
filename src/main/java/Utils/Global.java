@@ -3,7 +3,7 @@ package Utils;
 public class Global {
     public static final String ALGORITHM = "AES";
 
-    public static int resultNum = 500;
+    public static int resultNum = 10;
 
     /**
      * bloom编码参数设置
@@ -84,4 +84,6 @@ public class Global {
     public static int searchTime = 100;
 
     public static int searchLoopTime = 20;
+
+    public static int intersectionNum = 0;
 }

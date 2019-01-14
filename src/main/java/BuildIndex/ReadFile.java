@@ -42,6 +42,33 @@ public class ReadFile {
     }
 
     /**
+     * 根据文件路径，读取文件中的所有关键字
+     *
+     * @param filePath
+     * @return
+     * @throws IOException
+     */
+    public static ArrayList<String> readFile(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        ArrayList<String> list = new ArrayList<>();
+
+        String nextLine = reader.readLine();
+        while (nextLine != null) {
+            // System.out.println(nextLine);
+            // 处理每一个单词
+            if (Functions.isNumber(nextLine) || nextLine.equals("") || nextLine.equals("\n")) {
+                nextLine = reader.readLine();
+                continue;
+            }
+            list.add(nextLine);
+            nextLine = reader.readLine();
+        }
+        reader.close();
+        return list;
+    }
+
+
+    /**
      * 对某一个keyword进行bloom编码，随后进行minHash操作
      *
      * @param keyword

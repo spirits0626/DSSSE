@@ -1,5 +1,6 @@
 package Utils;
 
+import BuildIndex.ReadFile;
 import javafx.util.Pair;
 
 import java.io.*;
@@ -33,7 +34,38 @@ public class Functions {
         return buffInt.toByteArray();
     }
 
-    public static List<String> getPathList(ArrayList<String> indList, int resultNum) {
+    /**
+     * 暴力搜索关键字
+     *
+     * @param keyword
+     * @return
+     * @throws Exception
+     */
+    public static HashMap<String, Integer> bruteForceSearch(String keyword) throws Exception {
+        HashMap<String, Integer> map = new HashMap<>();
+        ArrayList<String> fileList = ReadFile.readFileList(Global.fileListPath);
+        for (String filePath : fileList) {
+            int i = 0;
+            ArrayList<String> wordList = ReadFile.readFile(filePath);
+            for (String word : wordList) {
+                if (word.equals(keyword)) {
+                    i++;
+                }
+            }
+            if (i > 0) {
+                map.put(filePath, i);
+            }
+        }
+        return map;
+    }
+
+    /**
+     * 评估搜索效率时使用
+     *
+     * @param indList
+     * @return
+     */
+    public static List<String> getPathList(ArrayList<String> indList) {
         List<String> indPathList = new ArrayList<>();
         HashMap<String, Integer> indPathMap = new HashMap<>();
         for (String ind : indList) {
@@ -45,17 +77,51 @@ public class Functions {
 
         Collections.sort(list, Comparator.comparing(Map.Entry<String, Integer>::getValue));
 
-        System.out.println(list.size());
+        // System.out.println(list.size());
 
-        /**
+        return indPathList;
+
+    }
+
+    /**
+     * 评估搜索准确率时使用
+     *
+     * @param indList
+     * @return
+     */
+    public static HashSet<String> getPathSet(ArrayList<String> indList) {
+        HashMap<String, Integer> indPathMap = new HashMap<>();
+        for (String ind : indList) {
+            Integer oldValue = indPathMap.get(ind);
+            indPathMap.put(ind, oldValue == null ? 1 : oldValue + 1);
+        }
+
+        return getPathSet(indPathMap);
+
+    }
+
+    /**
+     * 对所有的查询结果排序，获取排名前几的结果集合
+     *
+     * @param indPathMap
+     * @return
+     */
+    public static HashSet<String> getPathSet(HashMap<String, Integer> indPathMap) {
+        HashSet<String> indPathList = new HashSet<>();
+        int resultNum = Global.resultNum;
+        List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(indPathMap.entrySet());
+
+        Collections.sort(list, Comparator.comparing(Map.Entry<String, Integer>::getValue));
+
+        // System.out.println(list.size());
+
         for (int i = list.size() - 1; i >= 0 && resultNum > 0; i--, resultNum--) {
             Map.Entry<String, Integer> mapping = list.get(i);
             indPathList.add(mapping.getKey());
             // System.out.println(mapping.getKey() + ":" + mapping.getValue());
         }
-         */
-        return indPathList;
 
+        return indPathList;
     }
 
     public static <V> Pair<V, Double> time(Callable<V> task) {
@@ -105,7 +171,7 @@ public class Functions {
         return o;
     }
 
-    public static boolean isNumber(String str){
+    public static boolean isNumber(String str) {
         String reg = "^[0-9]+(.[0-9]+)?$";
         return str.matches(reg);
     }

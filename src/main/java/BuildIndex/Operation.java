@@ -111,30 +111,35 @@ public class Operation {
         //wordList.add("keyboard");
         for (String keyword : wordList) {
             System.out.println("keyword:" + keyword);
-            byte[] rkey = AES.geneKey(null).getEncoded();
 
-            ArrayList<String> indPathList = new ArrayList<>();
+            Functions.getPathList(searchKeyword(bloomFilter, hashFunctions, keyword));
+        }
+    }
 
-            Pair<ArrayList<Token>, Double> pair = Functions.time(() -> OperationOnClient.searchClientToServer(keyword, bloomFilter, hashFunctions, rkey));
+    static ArrayList<String> searchKeyword(BloomFilter bloomFilter, ArrayList<ArrayList> hashFunctions, String keyword) throws Exception {
+        byte[] rkey = AES.geneKey(null).getEncoded();
 
-            Global.clientTime += pair.getValue();
+        ArrayList<String> indPathList = new ArrayList<>();
 
-            ArrayList<Token> tokens = pair.getKey();
-            if (tokens != null) {
-                for (Token token : tokens) {
-                    if (token == null || token.getTokenOfCS() == null) {
-                        System.out.println("token is null!");
-                        continue;
-                    } else {
-                        Pair<ArrayList<byte[]>, Double> indexServer = Functions.time(() -> OperationOnIndexServer.searchAndUpdate(token.getTokenOfCS()));
+        Pair<ArrayList<Token>, Double> pair = Functions.time(() -> OperationOnClient.searchClientToServer(keyword, bloomFilter, hashFunctions, rkey));
 
-                        Global.serverResponseTime += indexServer.getValue();
-                        Global.serverResponseTime += Functions.time(() -> indPathList.addAll(OperationOnDataServer.search(indexServer.getKey(), token.getTokenOfDataServer()))).getValue();
-                    }
+        Global.clientTime += pair.getValue();
+
+        ArrayList<Token> tokens = pair.getKey();
+        if (tokens != null) {
+            for (Token token : tokens) {
+                if (token == null || token.getTokenOfCS() == null) {
+                    System.out.println("token is null!");
+                    continue;
+                } else {
+                    Pair<ArrayList<byte[]>, Double> indexServer = Functions.time(() -> OperationOnIndexServer.searchAndUpdate(token.getTokenOfCS()));
+
+                    Global.serverResponseTime += indexServer.getValue();
+                    Global.serverResponseTime += Functions.time(() -> indPathList.addAll(OperationOnDataServer.search(indexServer.getKey(), token.getTokenOfDataServer()))).getValue();
                 }
             }
-            Functions.getPathList(indPathList, Global.resultNum);
         }
+        return indPathList;
     }
 
 
