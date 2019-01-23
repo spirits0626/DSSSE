@@ -112,7 +112,7 @@ public class Operation {
         for (String keyword : wordList) {
             System.out.println("keyword:" + keyword);
 
-            Functions.getPathList(searchKeyword(bloomFilter, hashFunctions, keyword));
+            Functions.getPathList(searchKeyword(bloomFilter, hashFunctions, keyword), Global.top);
         }
     }
 

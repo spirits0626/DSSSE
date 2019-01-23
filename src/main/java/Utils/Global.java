@@ -3,7 +3,7 @@ package Utils;
 public class Global {
     public static final String ALGORITHM = "AES";
 
-    public static int resultNum = 10;
+    public static int top = 70;
 
     /**
      * bloom编码参数设置
@@ -46,7 +46,7 @@ public class Global {
     public static String dictKwdPath = "C:\\study\\Experimental Data\\dictKwd.txt";
 
     public static String experimentalResult = "C:\\study\\Experimental Data\\experimentalResult.txt";
- */
+     */
 
 
     public static String dataPath = "/home/wj/DSSSE/Experimental Data/test";
@@ -81,9 +81,9 @@ public class Global {
 
     public static double clientTime = 0;
 
-    public static int searchTime = 100;
+    public static int queryNum = 100;
 
     public static int searchLoopTime = 20;
 
-    public static int intersectionNum = 0;
+    public static double typoPercent = 0.25;
 }

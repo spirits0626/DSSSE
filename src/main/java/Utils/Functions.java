@@ -1,6 +1,6 @@
 package Utils;
 
-import BuildIndex.ReadFile;
+import BuildIndex.ExhaustiveSearch;
 import javafx.util.Pair;
 
 import java.io.*;
@@ -34,30 +34,6 @@ public class Functions {
         return buffInt.toByteArray();
     }
 
-    /**
-     * 暴力搜索关键字
-     *
-     * @param keyword
-     * @return
-     * @throws Exception
-     */
-    public static HashMap<String, Integer> bruteForceSearch(String keyword) throws Exception {
-        HashMap<String, Integer> map = new HashMap<>();
-        ArrayList<String> fileList = ReadFile.readFileList(Global.fileListPath);
-        for (String filePath : fileList) {
-            int i = 0;
-            ArrayList<String> wordList = ReadFile.readFile(filePath);
-            for (String word : wordList) {
-                if (word.equals(keyword)) {
-                    i++;
-                }
-            }
-            if (i > 0) {
-                map.put(filePath, i);
-            }
-        }
-        return map;
-    }
 
     /**
      * 评估搜索效率时使用
@@ -65,7 +41,7 @@ public class Functions {
      * @param indList
      * @return
      */
-    public static List<String> getPathList(ArrayList<String> indList) {
+    public static List<String> getPathList(ArrayList<String> indList, int top) {
         List<String> indPathList = new ArrayList<>();
         HashMap<String, Integer> indPathMap = new HashMap<>();
         for (String ind : indList) {
@@ -78,6 +54,12 @@ public class Functions {
         Collections.sort(list, Comparator.comparing(Map.Entry<String, Integer>::getValue));
 
         // System.out.println(list.size());
+
+        for (int i = list.size() - 1; i >= 0 && top > 0; i--, top--) {
+            Map.Entry<String, Integer> mapping = list.get(i);
+            indPathList.add(mapping.getKey());
+            // System.out.println(mapping.getKey() + ":" + mapping.getValue());
+        }
 
         return indPathList;
 
@@ -96,7 +78,7 @@ public class Functions {
             indPathMap.put(ind, oldValue == null ? 1 : oldValue + 1);
         }
 
-        return getPathSet(indPathMap);
+        return getPathSet(indPathMap, Global.top);
 
     }
 
@@ -106,9 +88,14 @@ public class Functions {
      * @param indPathMap
      * @return
      */
-    public static HashSet<String> getPathSet(HashMap<String, Integer> indPathMap) {
-        HashSet<String> indPathList = new HashSet<>();
-        int resultNum = Global.resultNum;
+    public static HashSet<String> getPathSet(HashMap<String, Integer> indPathMap, int top) {
+        HashSet<String> indPathSet = new HashSet<>();
+        int resultNum = top;
+        if (indPathMap.size() < resultNum) {
+            indPathSet.addAll(indPathMap.keySet());
+            return indPathSet;
+        }
+
         List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(indPathMap.entrySet());
 
         Collections.sort(list, Comparator.comparing(Map.Entry<String, Integer>::getValue));
@@ -117,11 +104,23 @@ public class Functions {
 
         for (int i = list.size() - 1; i >= 0 && resultNum > 0; i--, resultNum--) {
             Map.Entry<String, Integer> mapping = list.get(i);
-            indPathList.add(mapping.getKey());
+            indPathSet.add(mapping.getKey());
             // System.out.println(mapping.getKey() + ":" + mapping.getValue());
         }
 
-        return indPathList;
+        return indPathSet;
+    }
+
+    public static int getTruePositive(List<String> pathList, String query) throws IOException {
+        int num = 0;
+
+        for (String path : pathList) {
+            if (ExhaustiveSearch.traverseFile(path, query) > 0) {
+                ++num;
+            }
+        }
+
+        return num;
     }
 
     public static <V> Pair<V, Double> time(Callable<V> task) {
@@ -174,6 +173,21 @@ public class Functions {
     public static boolean isNumber(String str) {
         String reg = "^[0-9]+(.[0-9]+)?$";
         return str.matches(reg);
+    }
+
+    public static char randomChar(int choice) {
+        String s;
+        if (choice != 0) {
+            // 替换字母
+            s = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        } else {
+            // 替换数字
+            s = "0123456789";
+        }
+
+        char[] c = s.toCharArray();
+        Random random = new Random();
+        return c[random.nextInt(c.length)];
     }
 
     public static void main(String[] args) {
