@@ -55,7 +55,7 @@ public class Functions {
 
         // System.out.println(list.size());
 
-        for (int i = list.size() - 1; i >= 0 && top > 0; i--, top--) {
+        for (int i = list.size() - 1; i >= 0 && top >= 0; i--, top--) {
             Map.Entry<String, Integer> mapping = list.get(i);
             indPathList.add(mapping.getKey());
             // System.out.println(mapping.getKey() + ":" + mapping.getValue());

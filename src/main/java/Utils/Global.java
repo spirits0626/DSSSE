@@ -63,7 +63,7 @@ public class Global {
 
     public static String dictKwdPath = "/home/wj/DSSSE/Experimental Data/dictKwd.txt";
 
-    public static String experimentalResult = "/home/wj/DSSSE/Experimental Data/experimentalResult.txt";
+    public static String experimentalResult = "/home/wj/DSSSE/Experimental Data/experimentalResult";
 
 
     // 统计inverted index中值的总数

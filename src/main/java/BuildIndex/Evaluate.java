@@ -17,8 +17,11 @@ public class Evaluate {
 
     public static void main(String args[]) throws Exception {
 
-        // 打开保存实验结果的文件
-        FileOutputStream fos = new FileOutputStream(new File(Global.experimentalResult));
+        // 新建保存实验结果的文件
+        File file = new File(Global.experimentalResult + "-" + System.currentTimeMillis() + ".txt");
+        if(!file.exists())
+            file.createNewFile();
+        FileOutputStream fos = new FileOutputStream(file);
         OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
         BufferedWriter bw = new BufferedWriter(osw);
 
@@ -97,12 +100,12 @@ public class Evaluate {
                     bw.write("暴力索搜和相似性搜索结果对比:" + "\r\n");
                     for (int k = 0; k < Global.searchLoopTime; k++) {
 
-                        double[] precision = new double[Global.top / 10];
-                        double[] recall = new double[Global.top / 10];
+                        double[] precision = new double[Global.top / 10 + 1];
+                        double[] recall = new double[Global.top / 10 + 1];
 
-                        int[] truePositive = new int[Global.top / 10];
-                        int[] shouldSearched = new int[Global.top / 10];
-                        int[] searched = new int[Global.top / 10];
+                        int[] truePositive = new int[Global.top / 10 + 1];
+                        int[] shouldSearched = new int[Global.top / 10 + 1];
+                        int[] searched = new int[Global.top / 10 + 1];
 
                         List<String> keywords = GenerateTestData.generateKeywords(Global.queryNum);
                         List<String> keywords_typo = GenerateTestData.typoGenerator(keywords, (int) ((double) Global.queryNum * Global.typoPercent));
@@ -135,7 +138,7 @@ public class Evaluate {
                                 else
                                     searched[j] += list.size();
                                 s += 10;
-                                System.out.println(searched[j] + "===" + shouldSearched[j]);
+                                // System.out.println(searched[j] + "===" + shouldSearched[j]);
                             }
 
                             if ((i + 1) % (Global.queryNum / 10) == 0) {
