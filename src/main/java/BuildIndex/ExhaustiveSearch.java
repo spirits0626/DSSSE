@@ -40,7 +40,7 @@ public class ExhaustiveSearch {
         return num;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
     }
 }

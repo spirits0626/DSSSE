@@ -60,7 +60,7 @@ public class ReadFile {
                 nextLine = reader.readLine();
                 continue;
             }
-            list.add(nextLine);
+            list.add(nextLine.toLowerCase());
             nextLine = reader.readLine();
         }
         reader.close();

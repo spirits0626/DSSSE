@@ -7,8 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e8b281c-4358-4a18-b842-ac5d5c1af523" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk16_1_46.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ntrureencrypt/NTRUReEncrypt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ntrureencrypt/ReEncryptionKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ntrureencrypt/TestNTRUReEncrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_collections_eclipse_collections_7_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_collections_eclipse_collections_api_7_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_collections_eclipse_collections_forkjoin_7_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_runtime_1_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapdb_elsa_3_0_0_M5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapdb_mapdb_3_0_4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/DSSSE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DSSSE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BuildIndex/OperationOnClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildIndex/OperationOnClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BuildIndex/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildIndex/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/MapDBUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/dbmapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BuildIndex/ExhaustiveSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BuildIndex/ExhaustiveSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BuildIndex/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BuildIndex/Operation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BuildIndex/OperationOnClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BuildIndex/OperationOnClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BuildIndex/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BuildIndex/ReadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Global.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Global.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/MapDBUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/MapDBUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/dbmapTest.class" beforeDir="false" />
+>>>>>>> DSSSE-wujin
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,6 +65,11 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Evaluate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Evaluate.java">
+<<<<<<< HEAD
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+=======
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
@@ -44,6 +85,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
               <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+>>>>>>> DSSSE-wujin
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,23 +93,38 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="GenerateTestData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/GenerateTestData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+=======
+      <file leaf-file-name="Operation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
+>>>>>>> DSSSE-wujin
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="Operation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="198" selection-start-line="198" selection-end-line="198" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+=======
       <file leaf-file-name="Global.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Global.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -77,6 +134,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+>>>>>>> DSSSE-wujin
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,20 +142,86 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Global.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Global.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+=======
       <file leaf-file-name="AES.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/AES.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+>>>>>>> DSSSE-wujin
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="ExhaustiveSearch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+=======
+      <file leaf-file-name="NTRUReEncrypt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/NTRUReEncrypt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+>>>>>>> DSSSE-wujin
+              <folding>
+                <element signature="e#0#5227#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1783#1784#0" expanded="true" />
+                <element signature="e#1833#1834#0" expanded="true" />
+                <element signature="e#4171#4180#0" expanded="true" />
+                <element signature="e#5283#5284#0" expanded="true" />
+                <element signature="e#5328#5329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="AES.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/AES.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+=======
+      <file leaf-file-name="TestNTRUReEncrypt.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/TestNTRUReEncrypt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="40" column="31" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#2526#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> DSSSE-wujin
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+=======
+      <file leaf-file-name="ReEncryptionKey.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/ReEncryptionKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#518#0" expanded="true" />
+              </folding>
+>>>>>>> DSSSE-wujin
             </state>
           </provider>
         </entry>
@@ -181,12 +305,16 @@
         <option value="$PROJECT_DIR$/src/main/java/BuildIndex/BruteForceSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/BuildIndex/ReadFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/BuildIndex/KeywordGenerate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/GenerateTestData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Functions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/Global.java" />
         <option value="$PROJECT_DIR$/src/main/java/BuildIndex/Evaluate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/GenerateTestData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Global.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/main/java/BuildIndex/Evaluate.java" />
+=======
+>>>>>>> DSSSE-wujin
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -207,7 +335,11 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="284" />
+=======
+    <option name="x" value="105" />
+>>>>>>> DSSSE-wujin
     <option name="width" value="1809" />
     <option name="height" value="1047" />
   </component>
@@ -224,6 +356,51 @@
               <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
               <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="BuildIndex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ntrureencrypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSSSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSSSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> DSSSE-wujin
           </expand>
           <select />
         </subPane>
@@ -408,7 +585,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="549542000" />
+=======
+    <option name="totallyTimeSpent" value="550773000" />
+>>>>>>> DSSSE-wujin
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,7 +601,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="284" y="0" width="1809" height="1047" extended-state="0" />
+=======
+    <frame x="105" y="0" width="1809" height="1047" extended-state="0" />
+>>>>>>> DSSSE-wujin
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -440,10 +625,17 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32929516" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848393" weight="0.30837005" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4996968" weight="0.34361234" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986842" visible="true" weight="0.1292167" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32929516" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848393" visible="true" weight="0.30837005" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4996968" weight="0.34361234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4986842" visible="true" weight="0.1292167" />
+>>>>>>> DSSSE-wujin
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32929516" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -473,7 +665,10 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
+=======
+>>>>>>> DSSSE-wujin
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49898306" weight="0.23017621" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32893288" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -589,6 +784,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -603,6 +799,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> DSSSE-wujin
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Runtime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -656,20 +854,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/dbmapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MapDBUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/dbmapTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MapDBUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Base/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -803,20 +989,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="1411">
+          <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -827,27 +1003,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/AES.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/GenerateTestData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
+<<<<<<< HEAD
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+=======
+        <state relative-caret-position="245">
+          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+>>>>>>> DSSSE-wujin
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/GenerateTestData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+        <state relative-caret-position="280">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -856,23 +1030,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="57" column="66" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="66" />
+        <state relative-caret-position="144">
+          <caret line="73" column="70" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Global.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="289">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+=======
         <state relative-caret-position="330">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
+>>>>>>> DSSSE-wujin
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/Evaluate.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="280">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+=======
         <state relative-caret-position="119">
           <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+>>>>>>> DSSSE-wujin
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/AES.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildIndex/ExhaustiveSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="245">
+          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+=======
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+>>>>>>> DSSSE-wujin
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/ReEncryptionKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/NTRUReEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="330">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+=======
+        <state relative-caret-position="-114">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#5227#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+            <element signature="e#4171#4180#0" expanded="true" />
+            <element signature="e#5283#5284#0" expanded="true" />
+            <element signature="e#5328#5329#0" expanded="true" />
+          </folding>
+>>>>>>> DSSSE-wujin
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ntrureencrypt/TestNTRUReEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="119">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+=======
+        <state relative-caret-position="170">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="31" />
+>>>>>>> DSSSE-wujin
+          <folding>
+            <element signature="e#0#2526#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

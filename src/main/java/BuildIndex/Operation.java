@@ -59,7 +59,7 @@ public class Operation {
         return null;
     }
 
-    public static void init(BloomFilter bloomFilter, ArrayList<ArrayList> hashFunctions, ArrayList<String> fileList) {
+    public static void init(BloomFilter bloomFilter, ArrayList<ArrayList> hashFunctions, ArrayList<String> fileList) throws Exception{
         Global.serverResponseTime = 0;
         Global.clientTime = 0;
 
@@ -70,7 +70,7 @@ public class Operation {
             Global.clientTime += client.getValue();
 
             Global.serverResponseTime += Functions.time(() -> OperationOnIndexServer.operate(client.getKey(), "init")).getValue();
-            System.out.println(OperationOnIndexServer.getInvertedIndex().size() + " " + Global.invertedValueSize + "分割的桶数目" + Global.cutNum);
+            //System.out.println(OperationOnIndexServer.getInvertedIndex().size() + " " + Global.invertedValueSize + "分割的桶数目" + Global.cutNum);
 
         }
         Global.serverResponseTime += Functions.time(() -> OperationOnIndexServer.smooth(true, null)).getValue();
@@ -103,7 +103,6 @@ public class Operation {
     public static void search(BloomFilter bloomFilter, ArrayList<ArrayList> hashFunctions, List<String> wordList) throws Exception {
         Global.serverResponseTime = 0;
         Global.clientTime = 0;
-        Global.updateNum = 0;
 
         System.out.println("Please input the number of keywords you want to search:");
 

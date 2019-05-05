@@ -142,7 +142,7 @@ public class OperationOnClient {
 
             Key keys = DictKwd.get(hash);
             if (keys == null) {
-                return null;
+                continue;
             }
             byte[] key = keys.getKey();
             byte[] uKey = keys.getNewKey();
