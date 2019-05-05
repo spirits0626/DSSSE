@@ -15,5 +15,9 @@
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:4.0.0" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ntru:ntru:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk16:1.46" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:4.0.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ntru:ntru:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk16:1.46" level="project" />
   </component>
 </module>
