@@ -30,7 +30,7 @@ public class Global {
 
     public static int ForwardBucketSize = 300*hashOr;
 
-    /**
+
     public static String dataPath = "C:\\Users\\spirits\\Desktop\\filter\\arora-h";
 
     public static String fileListPath = "C:\\study\\Experimental Data\\fileList.txt";
@@ -46,9 +46,9 @@ public class Global {
     public static String dictKwdPath = "C:\\study\\Experimental Data\\dictKwd.txt";
 
     public static String experimentalResult = "C:\\study\\Experimental Data\\experimentalResult.txt";
-     */
 
 
+/**
     public static String dataPath = "/home/wj/DSSSE/Experimental Data/test";
 
     public static String fileListPath = "/home/wj/DSSSE/Experimental Data/fileList.txt";
@@ -64,7 +64,7 @@ public class Global {
     public static String dictKwdPath = "/home/wj/DSSSE/Experimental Data/dictKwd.txt";
 
     public static String experimentalResult = "/home/wj/DSSSE/Experimental Data/experimentalResult";
-
+ */
 
     // 统计inverted index中值的总数
     public static int invertedValueSize = 0;
